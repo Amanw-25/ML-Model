@@ -12,11 +12,11 @@ import env
 from utils.disease import disease_classes, disease_dic
 from utils.fertilizer import fertilizer_dic, fertilizer_preprocess
 from utils.model import ResNet9
-from utils.yields import yield_preprocess
+#from utils.yields import yield_preprocess
 
 # model paths
 crop_model_path = "models/crop_recommender.pkl"
-yield_model_path = "models/yield_prediction.pkl"
+#yield_model_path = "models/yield_prediction.pkl"
 fertilizer_model_path = "models/fertilizer_recommender.pkl"
 disease_model_path = "models/disease_teller.pth"
 
@@ -24,13 +24,13 @@ disease_model_path = "models/disease_teller.pth"
 with open(crop_model_path, "rb") as f:
     crop_model = pickle.load(f)
 
-with open(yield_model_path, "rb") as f:
-    model = pickle.load(f)
-    yield_model, yield_encoder, yield_scaler = (
-        model["model"],
-        model["one_hot_encoder"],
-        model["scaler"],
-    )
+#with open(yield_model_path, "rb") as f:
+#    model = pickle.load(f)
+#    yield_model, yield_encoder, yield_scaler = (
+#        model["model"],
+#        model["one_hot_encoder"],
+#        model["scaler"],
+#    )
 
 
 with open(fertilizer_model_path, "rb") as f:
