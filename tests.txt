@@ -11,3 +11,73 @@ curl -X POST -H "Content-Type: application/json" -d '{"city": "Bhopal", "moistur
 
 
 curl -X POST -H "Content-Type: application/json" -d '{"temperature": 26, "rainfall": 100, "state": "karnataka", "crop_type": "rabi", "crop": "rice", "nitrogen": 50, "pottasium": 50, "phosphorous": 50, "ph": 6.5, "area": 1000}' http://127.0.0.1:5000/yield-predict
+
+
+////////////////////////////////////////////////////////////////////// OR //////////////////////////////////////////////////////////////////////////////////////////
+
+1. Crop Prediction Request- 
+
+Postman Setup:
+
+Method: POST
+URL: http://127.0.0.1:5000/crop-predict
+Headers:
+Key: Content-Type, Value: application/json
+Body:
+{
+  "nitrogen": 50,
+  "phosphorous": 50,
+  "pottasium": 50,
+  "ph": 7,
+  "rainfall": 200,
+  "city": "Bhopal"
+}
+
+2. Disease Prediction Request
+Postman Setup:
+
+Method: POST
+URL: http://127.0.0.1:5000/disease-predict
+Body:
+Select form-data
+Key: file, Value: select File and upload some.jpg from the images directory on your machine.
+
+
+3. Fertilizer Prediction Request
+Postman Setup:
+Method: POST
+URL: http://127.0.0.1:5000/fertilizer-predict
+Headers:
+Key: Content-Type, Value: application/json
+Body:
+{
+  "city": "Bhopal",
+  "moisture": 38,
+  "soil_type": "Sandy",
+  "crop": "Maize",
+  "nitrogen": 37,
+  "pottasium": 0,
+  "phosphorous": 0
+}
+
+
+4. Yield Prediction Request
+Postman Setup:
+
+Method: POST
+URL: http://127.0.0.1:5000/yield-predict
+Headers:
+Key: Content-Type, Value: application/json
+Body:
+{
+  "temperature": 26,
+  "rainfall": 100,
+  "state": "karnataka",
+  "crop_type": "rabi",
+  "crop": "rice",
+  "nitrogen": 50,
+  "pottasium": 50,
+  "phosphorous": 50,
+  "ph": 6.5,
+  "area": 1000
+}
